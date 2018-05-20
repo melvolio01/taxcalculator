@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #loading, #results {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Tax Calculator</h1>
+                    <form id="salary-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">£</div>
+                            </div>
+                            <input type="number" class="form-control" id="amount" placeholder="salary amount">
+                            </div>
+                        </div>
+                       <!--  <div class="form-group">
+                            <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">%</div>
+                            </div>
+                            <input type="number" class="form-control" id="pension" placeholder="Pension contributions">
+                            </div>
+                        </div> -->
+                        <div class="form-group"><input type="submit" value="Calculate" class="btn-secondary btn-block" id="submit-button"></div>
+                        
+                        <!-- loader here! -->
+                        <div id="loading">
+                            <img src="loading.gif">
+                        </div>
+                        <!-- results -->
+                        <div id="results" class="pt-4">
+                            <h5>Results</h5>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Net Salary</div>
+                                </div>
+                                <input type="number" class="form-control text-success" id="net-salary" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Personal Allowance</div>
+                                </div>
+                                <input type="number" class="form-control text-info" id="personal-allowance" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text ">Total Tax Due</div>
+                                </div>
+                                <input type="number" class="form-control text-danger" id="total-tax" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text ">Basic Rate (20%)</div>
+                                </div>
+                                <input type="number" class="form-control text-info" id="basic-rate" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Higher Rate (40%)</div>
+                                </div>
+                                <input type="number" class="form-control text-info" id="high-rate" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Additional Rate (45%)</div>
+                                </div>
+                                <input type="number" class="form-control text-info" id="additional-rate" disabled>
+                                </div>
+                            </div>
+
+                                <div class="form-group">
+                                <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">National Insurance</div>
+                                </div>
+                                <input type="number" class="form-control text-danger" id="national-insurance" disabled>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
